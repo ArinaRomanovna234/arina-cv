@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Галерея - Кузьминова Арина Романовна</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="../index.html">Кузьминова Арина Романовна</a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Обо мне</a></li>
+          <li><a href="gallery.html" class="active">Галерея</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="gallery">
+        <h2>Галерея</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img
+              src="https://lh5.googleusercontent.com/proxy/Pe8zAW8dqqrBkdiho2j2D_OPWyEKmhUa9nmyG_M4lT-sCiREEE9bTxYCP4HYSHv3JBM-h7A6g1gWSXwzfX9oVxpcYP_Uh4xVaw"
+              alt="Фото 1"
+              data-index="0"
+              onError="this.onerror=null;this.src='../assets/img/404.png';"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://storage.yandexcloud.net/storage.yasno.media/nat-geo/images/2020/6/25/0fc978aba29e466e8eb4ffc946532d5e.max-1200x800.jpg"
+              alt="Фото 2"
+              data-index="1"
+              onError="this.onerror=null;this.src='../assets/img/404.png';"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://media.istockphoto.com/id/517188688/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%B3%D0%BE%D1%80%D0%BD%D1%8B%D0%B9-%D0%BB%D0%B0%D0%BD%D0%B4%D1%88%D0%B0%D1%84%D1%82.jpg?s=1024x1024&w=0&k=20&c=TqKo4rS3By8VfXQlepFRtpjWGdzs6x0DSXkTIBXi_zc="
+              alt="Фото 3"
+              data-index="2"
+              onError="this.onerror=null;this.src='../assets/img/404.png';"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://instalook.ru/uploads/news/2022/082022/idei-dlya-foto-v-more.jpg"
+              alt="Фото 4"
+              data-index="3"
+              onError="this.onerror=null;this.src='../assets/img/404.png';"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://raylab.ru/upload/medialibrary/16b/p0mup6vdbjxo393804fi723cpxs2hqtp.jpg"
+              alt="Фото 5"
+              data-index="4"
+              onError="this.onerror=null;this.src='../assets/img/404.png';"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://media.istockphoto.com/id/1442179368/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B2-%D0%BC%D0%B0%D0%BB%D1%8C%D0%B4%D0%B8%D0%B2%D1%8B.jpg?s=612x612&w=0&k=20&c=F2YD4MJObaRvX8IjKKDx90E1l1RyExiIygva3qZ366I="
+              alt="Фото 6"
+              data-index="5"
+              onError="this.onerror=null;this.src='../assets/img/404.png';"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://bigpicture.ru/wp-content/uploads/2014/12/luchshie-foto-nedeli-v-dek-2014-0.jpg"
+              alt="Фото 7"
+              data-index="6"
+              onError="this.onerror=null;this.src='../assets/img/404.png';"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://i.pinimg.com/736x/aa/41/5f/aa415f85988f799e378e453e092eb6c2.jpg"
+              alt="Фото 8"
+              data-index="7"
+              onError="this.onerror=null;this.src='../assets/img/404.png';"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://wl-adme.cf.tsp.li/resize/728x/jpg/6b6/037/b8d269523d81a1f3e4128065cf.jpg"
+              alt="Фото 9"
+              data-index="8"
+              onError="this.onerror=null;this.src='../assets/img/404.png';"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://img02.rl0.ru/afisha/e780x-i/daily.afisha.ru/uploads/images/9/c8/9c8dbd93078c4276a741b47c3fe1502b.jpg"
+              alt="Фото 10"
+              data-index="9"
+              onError="this.onerror=null;this.src='../assets/img/404.png';"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="modal" class="modal">
+      <span id="close-modal" class="close">&times;</span>
+      <button id="prev" class="arrow">&#10094;</button>
+      <img id="modal-image" class="modal-content" />
+      <button id="next" class="arrow">&#10095;</button>
+      <div id="modal-caption" class="caption"></div>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Арина К.</p>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Обо мне</a></li>
+          <li><a href="gallery.html">Галерея</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </footer>
+
+    <script src="../js/gallery.js"></script>
+  </body>
+</html>

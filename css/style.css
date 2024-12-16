@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+/* Сброс стандартных отступов и границ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Основной стиль для body */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Стиль для header */
+header {
+  background: linear-gradient(to right, #ff004d, #9d0b28, #5a082d, #33030d);
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Логотип в header */
+header .logo a {
+  font-size: 28px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+header .logo:hover a {
+  color: #9d0b28;
+  cursor: pointer;
+}
+
+/* Стили для навигации в header */
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+header nav ul li {
+  margin-left: 30px;
+  position: relative; /* Обязательно для позиционирования псевдоэлемента */
+}
+
+/* Стили для ссылок в навигации */
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s; /* Плавная анимация для цвета */
+}
+
+/* Эффект при наведении на ссылки */
+header nav ul li a:hover {
+  color: #ff004d;
+}
+
+/* Псевдоэлемент для анимации */
+header nav ul li a::after {
+  content: ''; /* Создаем пустой псевдоэлемент */
+  position: absolute;
+  bottom: -5px; /* Сдвигаем линию вниз на 5px */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ff004d; /* Цвет линии */
+  transform: scaleX(0); /* Начальное состояние - линия не видима */
+  transform-origin: bottom right; /* Начало трансформации */
+  transition: transform 0.3s ease-out; /* Плавная анимация */
+}
+
+/* Эффект при наведении на ссылки для псевдоэлемента */
+header nav ul li a:hover::after {
+  transform: scaleX(1); /* Разворачиваем линию при наведении */
+  transform-origin: bottom left; /* Меняем начало трансформации */
+}
+
+/* Стили для активной вкладки */
+header nav ul li a.active {
+  color: #ff004d;
+  font-weight: bold;
+  border-bottom: 2px solid #ff004d; /* Граница для активной ссылки */
+}
+
+/* Основной стиль для main */
+main {
+  background-color: #f8f8f8;
+  padding: 40px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex-grow: 1;
+}
+
+/* Стили для секций */
+section {
+  margin-bottom: 40px;
+}
+
+/* Оформление секции "Обо мне" */
+section#about {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.about-text {
+  text-align: left; /* Центрирование текста слева */
+  max-width: 800px; /* Ограничение ширины блока */
+  margin: 0 auto; /* Центрирование блока по горизонтали */
+}
+
+.about-text p {
+  color: #33030d;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.about-text a {
+  color: #ff004d;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.about-text a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .about-text {
+    padding: 20px;
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-text p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Рамка для фотографии */
+.photo-frame {
+  width: 300px;
+  height: 300px;
+  border: 5px solid #9d0b28;
+  background-color: #9d0b28;
+  margin: 20px auto;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Фото внутри рамки */
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Оформление заголовка в секции "Обо мне" */
+#about h2 {
+  color: #9d0b28;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+/* Оформление текста в секции "Обо мне" */
+#about p {
+  color: #33030d;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Адаптивность для устройств с шириной экрана до 768px */
+@media (max-width: 768px) {
+  .photo-frame {
+    width: 300px;
+    height: 300px;
+  }
+
+  #about h2 {
+    font-size: 1.5rem;
+  }
+
+  #about p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Адаптивность для устройств с очень маленькими экранами (до 480px) */
+@media (max-width: 480px) {
+  .photo-frame {
+    width: 250px;
+    height: 250px;
+  }
+
+  #about h2 {
+    font-size: 1.2rem;
+  }
+
+  #about p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+}
+
+/* Основной стиль для секций "Галерея" и "Контакты" */
+section#gallery,
+section#contacts {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Стиль для заголовков в галерее */
+h2 {
+  color: #5a082d;
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Сетка для галереи */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  justify-items: center; /* Центрирует элементы по горизонтали */
+  align-items: center; /* Центрирует элементы по вертикали */
+}
+
+/* Стиль для изображений в галерее */
+.gallery-item img {
+  width: 200px; /* фиксированная ширина */
+  height: 150px; /* фиксированная высота */
+  object-fit: cover; /* сохранение пропорций изображения */
+  border-radius: 10px; /* скругленные углы */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* тень для изображения */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+
+/* Модальное окно */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+  background-color: #fff; /* Белый фон для контента */
+}
+
+/* Кнопка закрытия */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  color: #33030d; /* Темно-красный цвет */
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #ff004d; /* Цвет при наведении */
+}
+
+/* Стрелочки для навигации */
+.arrow {
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#prev {
+  left: 0;
+  color: #9d0b28; /* Цвет стрелки влево */
+}
+
+#next {
+  right: 0;
+  color: #5a082d; /* Цвет стрелки вправо */
+}
+
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.arrow:focus {
+  outline: none;
+}
+
+/* Стили для секции контактов */
+.contacts-section {
+  background-color: #33030d;
+  padding: 30px;
+  border-radius: 10px;
+  color: #fff;
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contacts-title {
+  font-size: 2rem;
+  color: #ff004d;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  color: #9d0b28;
+}
+
+.contact-info strong {
+  color: #5a082d;
+}
+
+.contact-link {
+  color: #ff004d;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-link:hover {
+  color: #9d0b28;
+  text-decoration: underline;
+}
+
+.contact-link:focus {
+  outline: none;
+  border: 2px solid #ff004d;
+}
+
+/* Стиль для футера */
+footer {
+  background: linear-gradient(to right, #ff004d, #9d0b28, #5a082d, #33030d);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+/* Стили для навигации в футере */
+footer nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+footer nav ul li {
+  margin-left: 20px;
+}
+
+footer nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+footer nav ul li a:hover {
+  color: #ff004d;
+}
+
+/* Адаптивность для экранов с шириной до 768px */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header nav ul {
+    margin-top: 10px;
+    gap: 20px;
+  }
+
+  header nav ul li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  footer nav ul {
+    flex-direction: column;
+  }
+}
